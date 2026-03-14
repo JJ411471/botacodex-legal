@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>プライバシーポリシー | BotaCodex</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      background: #f8faf7;
+      color: #2d2d2d;
+      line-height: 1.8;
+    }
+    header {
+      background: #2d6a4f;
+      color: #fff;
+      padding: 24px 0;
+      text-align: center;
+    }
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    header .logo span { color: #95d5b2; }
+    nav.page-nav {
+      background: #1b4332;
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      padding: 12px 0;
+    }
+    nav.page-nav a {
+      color: #95d5b2;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    nav.page-nav a:hover { text-decoration: underline; }
+    .container {
+      max-width: 800px;
+      margin: 48px auto;
+      padding: 0 24px 64px;
+    }
+    .doc-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 48px 56px;
+      margin-bottom: 48px;
+    }
+    @media (max-width: 600px) {
+      .doc-card { padding: 32px 24px; }
+    }
+    h1 {
+      font-size: 1.6rem;
+      color: #1b4332;
+      border-bottom: 3px solid #95d5b2;
+      padding-bottom: 12px;
+      margin-bottom: 8px;
+    }
+    .updated {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-size: 1.1rem;
+      color: #2d6a4f;
+      margin: 36px 0 12px;
+      padding-left: 12px;
+      border-left: 4px solid #52b788;
+    }
+    p { margin-bottom: 12px; font-size: 0.95rem; }
+    ul {
+      margin: 8px 0 12px 20px;
+      font-size: 0.95rem;
+    }
+    ul li { margin-bottom: 6px; }
+    .contact-box {
+      background: #f0faf4;
+      border: 1px solid #95d5b2;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-top: 16px;
+      font-size: 0.9rem;
+    }
+    footer {
+      text-align: center;
+      padding: 32px;
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🌿 Bota<span>Codex</span></div>
+</header>
+
+<nav class="page-nav">
+  <a href="#privacy">プライバシーポリシー</a>
+  <a href="#terms">利用規約</a>
+</nav>
+
+<div class="container">
+
+  <!-- ==================== プライバシーポリシー ==================== -->
+  <div class="doc-card" id="privacy">
+    <h1>プライバシーポリシー</h1>
+    <p class="updated">制定日：2026年3月13日　最終更新：2026年3月13日</p>
+
+    <p>BotaCodex（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めます。本ポリシーは、本アプリが収集する情報の種類、利用目的、管理方法について説明するものです。</p>
+
+    <h2>1. 収集する情報</h2>
+    <p>本アプリは以下の情報を収集します。</p>
+    <ul>
+      <li><strong>アカウント情報：</strong>メールアドレス（ユーザー認証のため）</li>
+      <li><strong>植物管理データ：</strong>植物名・種名・場所・水やり記録・成長記録・メモ等、ユーザーが入力した植物に関する情報</li>
+      <li><strong>写真データ：</strong>ユーザーがアップロードした植物の写真</li>
+      <li><strong>課金情報：</strong>サブスクリプションの購入・復元状態（決済情報はRevenueCat社が管理し、本アプリは保持しません）</li>
+      <li><strong>利用状況データ：</strong>アプリの動作に必要な技術的情報（エラーログ等）</li>
+    </ul>
+
+    <h2>2. 情報の利用目的</h2>
+    <p>収集した情報は以下の目的で利用します。</p>
+    <ul>
+      <li>本アプリの機能提供（植物管理・水やり通知・アドバイス等）</li>
+      <li>ユーザーアカウントの認証・管理</li>
+      <li>サブスクリプションサービスの提供・管理</li>
+      <li>アプリの品質向上・不具合対応</li>
+      <li>ユーザーサポートへの対応</li>
+    </ul>
+
+    <h2>3. 情報の保管</h2>
+    <p>ユーザーデータはSupabase（Supabase Inc.）のデータベースに保管されます。写真データはCloudflare R2（Cloudflare, Inc.）のストレージに保管されます。いずれも業界標準のセキュリティ基準に準拠した環境で管理されます。</p>
+
+    <h2>4. 第三者提供</h2>
+    <p>本アプリは、以下の場合を除き、ユーザーの個人情報を第三者に提供しません。</p>
+    <ul>
+      <li>ユーザー本人の同意がある場合</li>
+      <li>法令に基づく開示が必要な場合</li>
+      <li>サービス提供に必要な業務委託先への提供（下記参照）</li>
+    </ul>
+
+    <h2>5. 利用する外部サービス</h2>
+    <ul>
+      <li><strong>Supabase（Supabase Inc.）：</strong>認証・データベース管理</li>
+      <li><strong>Cloudflare R2（Cloudflare, Inc.）：</strong>写真ストレージ</li>
+      <li><strong>RevenueCat（RevenueCat, Inc.）：</strong>サブスクリプション・課金管理</li>
+    </ul>
+    <p>各社のプライバシーポリシーについては、それぞれの公式サイトをご確認ください。</p>
+
+    <h2>6. 通知</h2>
+    <p>本アプリは、水やりの管理を目的としたローカル通知を端末上で送信します。通知は端末の設定からいつでもオフにできます。</p>
+
+    <h2>7. アカウント削除</h2>
+    <p>ユーザーはアプリ内の設定画面からいつでもアカウントを削除できます。削除後、ユーザーのデータはすべて消去されます。</p>
+
+    <h2>8. お子様のプライバシー</h2>
+    <p>本アプリは13歳未満のお子様を対象としておらず、意図的に13歳未満の個人情報を収集しません。</p>
+
+    <h2>9. ポリシーの変更</h2>
+    <p>本ポリシーは必要に応じて改訂することがあります。重要な変更がある場合は、アプリ内またはこのページでお知らせします。</p>
+
+    <h2>10. お問い合わせ</h2>
+    <div class="contact-box">
+      プライバシーに関するお問い合わせは、アプリ内の「お問い合わせ」機能またはサポートメールにてご連絡ください。
+    </div>
+  </div>
+
+  <!-- ==================== 利用規約 ==================== -->
+  <div class="doc-card" id="terms">
+    <h1>利用規約</h1>
+    <p class="updated">制定日：2026年3月13日　最終更新：2026年3月13日</p>
+
+    <p>本利用規約（以下「本規約」）は、BotaCodex（以下「本アプリ」）の利用条件を定めるものです。本アプリをご利用いただく前に、本規約をよくお読みください。ご利用を開始した時点で、本規約に同意いただいたものとみなします。</p>
+
+    <h2>1. サービスの概要</h2>
+    <p>本アプリは、植物の管理・育成支援を目的としたアプリケーションです。植物のリスト管理、水やり記録・通知、成長記録、アドバイス機能を提供します。</p>
+
+    <h2>2. アカウント</h2>
+    <ul>
+      <li>本アプリの利用にはアカウントの作成が必要です。</li>
+      <li>アカウント情報（メールアドレス・パスワード等）は正確に登録し、第三者への共有・譲渡は禁止します。</li>
+      <li>アカウントの不正利用による損害について、開発者は責任を負いません。</li>
+    </ul>
+
+    <h2>3. 有料サービス（サブスクリプション）</h2>
+    <ul>
+      <li>一部の機能は有料サブスクリプションの契約が必要です。</li>
+      <li>料金・期間は申込時に表示される内容に従います。</li>
+      <li>サブスクリプションは自動更新となります。更新を停止するには、各ストア（App Store / Google Play）の設定から解約手続きを行ってください。</li>
+      <li>支払い済みの利用期間が残っている場合でも、解約後はその期間の終了をもってサービスが終了します。返金はApp Store / Google Playの規約に準じます。</li>
+    </ul>
+
+    <h2>4. 禁止事項</h2>
+    <p>以下の行為を禁止します。</p>
+    <ul>
+      <li>本アプリの逆コンパイル・リバースエンジニアリング</li>
+      <li>他のユーザーや第三者を害する目的での利用</li>
+      <li>虚偽情報の登録</li>
+      <li>法令または公序良俗に反する行為</li>
+      <li>本アプリのサーバーに過大な負荷をかける行為</li>
+    </ul>
+
+    <h2>5. コンテンツの権利</h2>
+    <p>ユーザーが本アプリに登録したデータ（写真・記録等）の権利はユーザーに帰属します。ユーザーは、サービス提供に必要な範囲で開発者がこれらのデータを利用することに同意します。</p>
+
+    <h2>6. 免責事項</h2>
+    <ul>
+      <li>本アプリは現状のまま提供されます。植物の管理結果について開発者は保証しません。</li>
+      <li>通信障害・サーバー障害等によるサービス中断について、開発者は責任を負いません。</li>
+      <li>本アプリの利用・利用不能により生じた損害について、開発者は責任を負いません。</li>
+    </ul>
+
+    <h2>7. サービスの変更・終了</h2>
+    <p>開発者は、事前通知なくサービス内容の変更・追加・終了を行うことがあります。重要な変更については、アプリ内またはこのページでお知らせします。</p>
+
+    <h2>8. 規約の変更</h2>
+    <p>本規約は必要に応じて改訂することがあります。改訂後の規約はこのページに掲載され、掲載時点より効力を生じます。</p>
+
+    <h2>9. 準拠法・管轄</h2>
+    <p>本規約は日本法に準拠します。本アプリに関する紛争については、開発者の所在地を管轄する裁判所を専属的合意管轄とします。</p>
+
+    <h2>10. お問い合わせ</h2>
+    <div class="contact-box">
+      本規約に関するお問い合わせは、アプリ内の「お問い合わせ」機能またはサポートメールにてご連絡ください。
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2026 BotaCodex. All rights reserved.
+</footer>
+
+</body>
+</html>
