@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BotaCodex</title>
+<meta name="description" content="BotaCodex 公式サポートサイト。植物管理アプリのプライバシーポリシー、利用規約、サポート情報。">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="/favicon.png">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f8f5;
+    color: #2d3a2e;
+    line-height: 1.8;
+    font-size: 16px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero {
+    background: linear-gradient(135deg, #2e7d32 0%, #43a047 100%);
+    color: #fff;
+    padding: 3.5rem 1.5rem 4rem;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+    margin: 0 0 0.6rem;
+    letter-spacing: 0.02em;
+  }
+  .hero p {
+    font-size: 1.05rem;
+    margin: 0;
+    opacity: 0.95;
+  }
+  main {
+    flex: 1;
+    max-width: 720px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    width: 100%;
+  }
+  .card-list {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid #e0e8dd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: #2d3a2e;
+    display: block;
+    transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(46, 125, 50, 0.12);
+    border-color: #66bb6a;
+  }
+  .card h2 {
+    color: #1b5e20;
+    margin: 0 0 0.4rem;
+    font-size: 1.15rem;
+  }
+  .card p {
+    margin: 0;
+    color: #5a6660;
+    font-size: 0.95rem;
+  }
+  footer {
+    text-align: center;
+    color: #707070;
+    font-size: 0.85rem;
+    padding: 2rem 1rem;
+  }
+  @media (max-width: 640px) {
+    .hero { padding: 2.5rem 1.2rem 3rem; }
+    .hero h1 { font-size: 1.6rem; }
+    .card { padding: 1.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <h1>BotaCodex</h1>
+  <p>植物マニアのための本格管理アプリ</p>
+</section>
+
+<main>
+  <div class="card-list">
+    <a href="/privacy-policy" class="card">
+      <h2>プライバシーポリシー</h2>
+      <p>個人情報の取り扱いについて</p>
+    </a>
+    <a href="/terms-of-service" class="card">
+      <h2>利用規約</h2>
+      <p>アプリの利用条件について</p>
+    </a>
+    <a href="/support" class="card">
+      <h2>サポート</h2>
+      <p>よくある質問・お問い合わせ</p>
+    </a>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 山本潤史. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
