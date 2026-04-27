@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BotaCodex - ログイン</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #0E1410;
+      color: #E8EAE5;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .container {
+      max-width: 480px;
+      padding: 2rem;
+    }
+    h1 {
+      color: #9BC09B;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.02em;
+    }
+    p {
+      color: #E8EAE5;
+      opacity: 0.85;
+      line-height: 1.7;
+      margin: 0.75rem 0;
+    }
+    .muted {
+      opacity: 0.6;
+      font-size: 0.9rem;
+    }
+    .button {
+      display: inline-block;
+      background: #9BC09B;
+      color: #0E1410;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 1.5rem;
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+    .button:hover {
+      opacity: 0.85;
+    }
+    .spinner {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      border: 2px solid rgba(155, 192, 155, 0.3);
+      border-top-color: #9BC09B;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: 1rem;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="spinner"></div>
+    <h1>BotaCodex</h1>
+    <p>アプリを開いています...</p>
+    <p class="muted">アプリが自動で開かない場合は、下のボタンから App Store でインストールしてください。</p>
+    <a class="button" href="https://apps.apple.com/jp/app/botacodex/id6760905941">
+      App Store で開く
+    </a>
+  </div>
+
+  <script>
+    (function() {
+      var hash = window.location.hash || '';
+      var search = window.location.search || '';
+
+      try {
+        var ua = navigator.userAgent || '';
+        var isIOS = /iPad|iPhone|iPod/.test(ua);
+
+        if (isIOS) {
+          var fallbackUrl = 'com.botacodex.app://login-callback' + search + hash;
+          setTimeout(function() {
+            window.location.href = fallbackUrl;
+          }, 1500);
+        }
+      } catch (e) {
+        console.error('[LoginCallback] redirect failed:', e);
+      }
+    })();
+  </script>
+</body>
+</html>
