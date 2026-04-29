@@ -1,0 +1,3 @@
+# Cloudflare Pages routing
+# /plant/{any-uuid} -> plant/index.html (200, URL保持)
+/plant/*  /plant/index.html  200
