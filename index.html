@@ -447,19 +447,19 @@ svg { flex-shrink: 0; }
 }
 
 /* ============================================================
-   QR Placeholder Group
+   Feature: Wide Photo (QR Tag section)
    ============================================================ */
-.qr-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-  max-width: 380px;
+.feature-image-wide {
   width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
-.qr-subgrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.9rem;
+.feature-image-wide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 /* ============================================================
@@ -1026,24 +1026,14 @@ svg { flex-shrink: 0; }
     <!-- Feature 03: QR Tag — normal order (visual right, text left) -->
     <div class="feature-block">
       <div class="feature-visual">
-        <div class="qr-group">
-          <div class="photo-placeholder photo-placeholder-3-4">
-            <div class="photo-placeholder-hatch"></div>
-            <span class="photo-placeholder-label">鉢に貼った QR タグ</span>
-            <span class="photo-placeholder-sub">(撮影予定)</span>
-          </div>
-          <div class="qr-subgrid">
-            <div class="photo-placeholder photo-placeholder-1-1">
-              <div class="photo-placeholder-hatch"></div>
-              <span class="photo-placeholder-label">QR ラベル</span>
-              <span class="photo-placeholder-sub">(撮影予定)</span>
-            </div>
-            <div class="photo-placeholder photo-placeholder-1-1">
-              <div class="photo-placeholder-hatch"></div>
-              <span class="photo-placeholder-label">スキャン中</span>
-              <span class="photo-placeholder-sub">(撮影予定)</span>
-            </div>
-          </div>
+        <div class="feature-image-wide">
+          <img
+            src="/images/features/qr-tag-scanning.webp"
+            alt="塊根植物のコレクションが並ぶ中、Pachypodium gracilius の鉢に貼られた QR タグを iPhone でスキャンしている様子"
+            loading="lazy"
+            width="1448"
+            height="1086"
+          >
         </div>
       </div>
       <div class="feature-content">
