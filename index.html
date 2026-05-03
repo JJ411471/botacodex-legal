@@ -329,6 +329,38 @@ svg { flex-shrink: 0; }
 
 
 /* ============================================================
+   iPhone Pair — Section 3-0 (2画面構成)
+   ============================================================ */
+.iphone-pair {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  justify-content: center;
+  /* extra bottom room for translateY offset of second phone */
+  padding-bottom: 28px;
+}
+.iphone-pair .phone-frame {
+  width: 200px;
+  height: 433px; /* 200 * 19.5/9 */
+  border-radius: 28px; /* 200 * 0.14 */
+  padding: 5px;     /* 200 * 0.025 */
+  flex-shrink: 0;
+}
+.iphone-pair .phone-screen {
+  border-radius: 23px; /* 200 * 0.115 */
+}
+.iphone-pair .phone-island {
+  width: 64px;  /* 200 * 0.32 */
+  height: 17px; /* 200 * 0.085 */
+  top: 8px;     /* 200 * 0.04  */
+  border-radius: 12px; /* 200 * 0.06 */
+}
+/* second phone — subtle vertical offset for depth */
+.iphone-pair .phone-frame:last-child {
+  transform: translateY(24px);
+}
+
+/* ============================================================
    Feature: Wide Photo (QR Tag section)
    ============================================================ */
 .feature-image-wide {
@@ -690,6 +722,12 @@ svg { flex-shrink: 0; }
   }
   .feature-visual { min-width: unset; width: 100%; }
   .feature-content { min-width: unset; width: 100%; }
+  /* iphone-pair on mobile: scale down so both fit side by side */
+  .iphone-pair { gap: 0.7rem; padding-bottom: 20px; }
+  .iphone-pair .phone-frame { width: 150px; height: 325px; border-radius: 21px; padding: 4px; }
+  .iphone-pair .phone-screen { border-radius: 17px; }
+  .iphone-pair .phone-island { width: 48px; height: 13px; top: 6px; border-radius: 9px; }
+  .iphone-pair .phone-frame:last-child { transform: translateY(18px); }
   .section-diff { padding: 4rem 1.2rem; }
   .section-plans { padding: 4rem 1.2rem; }
   .section-cta { padding: 5rem 1.2rem; }
@@ -713,6 +751,11 @@ svg { flex-shrink: 0; }
   }
   .feature-visual { min-width: unset; }
   .feature-content { min-width: unset; }
+  /* iphone-pair on tablet: slightly smaller than desktop */
+  .iphone-pair .phone-frame { width: 180px; height: 390px; border-radius: 25px; padding: 5px; }
+  .iphone-pair .phone-screen { border-radius: 21px; }
+  .iphone-pair .phone-island { width: 58px; height: 15px; top: 7px; border-radius: 11px; }
+  .iphone-pair .phone-frame:last-child { transform: translateY(22px); }
 }
 </style>
 </head>
@@ -855,13 +898,21 @@ svg { flex-shrink: 0; }
       </h2>
     </div>
 
-    <!-- Feature 01: Collection — normal order (visual left / text right) -->
+    <!-- Feature 01: Collection — normal order (visual left / text right) — 2画面構成 -->
     <div class="feature-block">
       <div class="feature-visual">
-        <div class="phone-frame">
-          <div class="phone-screen">
-            <img src="/images/features/home-collection-real.webp" alt="BotaCodex のホーム画面。監視中 67 株のコレクション全体を一画面で表示。今日のタスク、Upcoming タスクが見える" class="phone-screen-img" width="266" height="593" loading="lazy">
-            <div class="phone-island"></div>
+        <div class="iphone-pair">
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <img src="/images/features/home-collection-real.webp" alt="BotaCodex のホーム画面。監視中 67 株のコレクション、今日のタスク・Upcoming タスクを一画面で表示" class="phone-screen-img" width="266" height="593" loading="lazy">
+              <div class="phone-island"></div>
+            </div>
+          </div>
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <img src="/images/features/plant-list-real.webp" alt="BotaCodex の植物一覧画面。66 株登録、品種フィルタと検索で絞り込み可能" class="phone-screen-img" width="266" height="593" loading="lazy">
+              <div class="phone-island"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -873,7 +924,9 @@ svg { flex-shrink: 0; }
         </div>
         <h3 class="feature-h3">コレクション全体を、ひとつのインデックスに。</h3>
         <p class="feature-body">監視中の株数、水やり超過、記録不足。</p>
-        <p class="feature-body">すべての状態を、ひとつの画面で見渡せます。何十株、何百株でも、見落としません。</p>
+        <p class="feature-body">すべての状態を、ひとつの画面で見渡せます。</p>
+        <p class="feature-body">品種で絞り込み、目当ての株をすぐに見つける。</p>
+        <p class="feature-body">何十株、何百株でも、見落としません。</p>
         <div class="feature-scene">
           <span class="scene-arrow">›</span> 朝の数分で、今日やるべきことが分かる。
         </div>
