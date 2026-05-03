@@ -327,124 +327,6 @@ svg { flex-shrink: 0; }
   z-index: 10;
 }
 
-/* Screen SVG content (fallback while images load) */
-.screen-content {
-  width: 100%;
-  height: 100%;
-  background: var(--bg-secondary);
-  color: var(--text-primary);
-  font-size: 11px;
-  padding: 38px 14px 14px;
-  box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
-  overflow: hidden;
-}
-.screen-meta {
-  font-size: 9px;
-  color: var(--text-muted);
-  letter-spacing: 0.1em;
-  margin-bottom: 4px;
-}
-.screen-title {
-  font-size: 22px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  margin-bottom: 16px;
-}
-.screen-card {
-  background: #14191A;
-  border-radius: 8px;
-  padding: 12px;
-  margin-bottom: 8px;
-  border: 1px solid var(--border);
-}
-.screen-plant-row {
-  background: #14191A;
-  border-radius: 8px;
-  padding: 10px;
-  margin-bottom: 6px;
-  border: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  gap: 9px;
-}
-.screen-plant-thumb {
-  width: 30px;
-  height: 30px;
-  border-radius: 5px;
-  background: var(--bg-raised);
-  flex-shrink: 0;
-}
-.screen-plant-name {
-  font-size: 10px;
-  font-weight: 500;
-  color: var(--text-primary);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.screen-plant-sub {
-  font-size: 8px;
-  color: var(--text-muted);
-  margin-top: 1px;
-}
-.screen-tag-recommend {
-  font-size: 8px;
-  padding: 2px 6px;
-  border-radius: 3px;
-  background: var(--accent);
-  color: var(--bg-secondary);
-  font-weight: 500;
-  flex-shrink: 0;
-}
-.screen-tag-wait {
-  font-size: 8px;
-  padding: 2px 6px;
-  border-radius: 3px;
-  background: transparent;
-  color: var(--text-muted);
-  border: 1px solid var(--border);
-  flex-shrink: 0;
-}
-
-/* ============================================================
-   Photo Placeholder
-   ============================================================ */
-.photo-placeholder {
-  width: 100%;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  color: var(--text-muted);
-  position: relative;
-  overflow: hidden;
-}
-.photo-placeholder-3-4 { aspect-ratio: 3/4; }
-.photo-placeholder-1-1 { aspect-ratio: 1/1; }
-.photo-placeholder-hatch {
-  position: absolute;
-  inset: 0;
-  opacity: 0.4;
-  background-image: linear-gradient(45deg, transparent 49%, #2A2F2B 50%, transparent 51%);
-  background-size: 24px 24px;
-}
-.photo-placeholder-label {
-  font-size: 13px;
-  letter-spacing: 0.02em;
-  position: relative;
-  z-index: 1;
-}
-.photo-placeholder-sub {
-  font-size: 11px;
-  color: #4A5048;
-  position: relative;
-  z-index: 1;
-}
 
 /* ============================================================
    Feature: Wide Photo (QR Tag section)
@@ -969,16 +851,16 @@ svg { flex-shrink: 0; }
     <div class="features-header">
       <div class="label-mono">$ ./instruments --list</div>
       <h2 id="features-title" class="section-heading">
-        育てる人のための、4 つの道具。
+        育てる人のための、5 つの道具。
       </h2>
     </div>
 
-    <!-- Feature 01: AI Watering — normal order (visual right, text left) -->
+    <!-- Feature 01: Collection — normal order (visual left / text right) -->
     <div class="feature-block">
       <div class="feature-visual">
         <div class="phone-frame">
           <div class="phone-screen">
-            <img src="/images/features/ai-watering.webp" alt="AI水やり提案 — Todayビュー、水やりが推奨される株リスト" class="phone-screen-img" width="266" height="593" loading="lazy">
+            <img src="/images/features/home-collection-real.webp" alt="BotaCodex のホーム画面。監視中 67 株のコレクション全体を一画面で表示。今日のタスク、Upcoming タスクが見える" class="phone-screen-img" width="266" height="593" loading="lazy">
             <div class="phone-island"></div>
           </div>
         </div>
@@ -986,7 +868,32 @@ svg { flex-shrink: 0; }
       <div class="feature-content">
         <div class="feature-badges">
           <span class="badge-num">01</span>
-          <span class="badge-code">AI_WATERING</span>
+          <span class="badge-code">COLLECTION</span>
+          <span class="badge-plan badge-plan-free">Free</span>
+        </div>
+        <h3 class="feature-h3">コレクション全体を、ひとつのインデックスに。</h3>
+        <p class="feature-body">監視中の株数、水やり超過、記録不足。</p>
+        <p class="feature-body">すべての状態を、ひとつの画面で見渡せます。何十株、何百株でも、見落としません。</p>
+        <div class="feature-scene">
+          <span class="scene-arrow">›</span> 朝の数分で、今日やるべきことが分かる。
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 02: AI Watering — reversed (visual right / text left) -->
+    <div class="feature-block reversed">
+      <div class="feature-visual">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <img src="/images/features/ai-watering-real.webp" alt="BotaCodex の植物詳細画面。AI アドバイスと水やり間隔の自動計算、AI 推奨間隔の比較が見える" class="phone-screen-img" width="266" height="593" loading="lazy">
+            <div class="phone-island"></div>
+          </div>
+        </div>
+      </div>
+      <div class="feature-content">
+        <div class="feature-badges">
+          <span class="badge-num">02</span>
+          <span class="badge-code">WATERING</span>
           <span class="badge-plan badge-plan-free">Free</span>
         </div>
         <h3 class="feature-h3">水やりは、AI に相談しながら。</h3>
@@ -998,20 +905,20 @@ svg { flex-shrink: 0; }
       </div>
     </div>
 
-    <!-- Feature 02: AI Photo Chat — reversed (visual left, text right) -->
-    <div class="feature-block reversed">
+    <!-- Feature 03: AI Photo Chat — normal order (visual left / text right) -->
+    <div class="feature-block">
       <div class="feature-visual">
         <div class="phone-frame">
           <div class="phone-screen">
-            <img src="/images/features/ai-photo-chat.webp" alt="AI写真相談 — 葉の黄変について相談する画面" class="phone-screen-img" width="266" height="593" loading="lazy">
+            <img src="/images/features/ai-photo-chat-real.webp" alt="BotaCodex の AI 写真相談画面。オペルクリカリア パキプスの状態を写真で AI に相談している様子" class="phone-screen-img" width="266" height="593" loading="lazy">
             <div class="phone-island"></div>
           </div>
         </div>
       </div>
       <div class="feature-content">
         <div class="feature-badges">
-          <span class="badge-num">02</span>
-          <span class="badge-code">AI_PHOTO_CHAT</span>
+          <span class="badge-num">03</span>
+          <span class="badge-code">AI_PHOTO</span>
           <span class="badge-plan badge-plan-pro">Pro</span>
         </div>
         <h3 class="feature-h3">不安な変化を、写真で相談。</h3>
@@ -1023,7 +930,7 @@ svg { flex-shrink: 0; }
       </div>
     </div>
 
-    <!-- Feature 03: QR Tag — normal order (visual right, text left) -->
+    <!-- Feature 04: QR Tag — normal order (visual left / text right) — 自然光写真、変更なし -->
     <div class="feature-block">
       <div class="feature-visual">
         <div class="feature-image-wide">
@@ -1038,7 +945,7 @@ svg { flex-shrink: 0; }
       </div>
       <div class="feature-content">
         <div class="feature-badges">
-          <span class="badge-num">03</span>
+          <span class="badge-num">04</span>
           <span class="badge-code">QR_TAG</span>
           <span class="badge-plan badge-plan-free">Free / Pro</span>
         </div>
@@ -1052,19 +959,19 @@ svg { flex-shrink: 0; }
       </div>
     </div>
 
-    <!-- Feature 04: Memorial — reversed (visual left, text right) -->
+    <!-- Feature 05: Memorial — reversed (visual right / text left) -->
     <div class="feature-block reversed">
       <div class="feature-visual">
         <div class="phone-frame">
           <div class="phone-screen">
-            <img src="/images/features/memorial.webp" alt="メモリアル詳細画面 — 枯れた株の記録と原因メモ" class="phone-screen-img" width="266" height="593" loading="lazy">
+            <img src="/images/features/memorial-real.webp" alt="BotaCodex のメモリアル画面。枯死した株の基本情報、枯死の記録、AI 枯死原因分析が表示されている" class="phone-screen-img" width="266" height="593" loading="lazy">
             <div class="phone-island"></div>
           </div>
         </div>
       </div>
       <div class="feature-content">
         <div class="feature-badges">
-          <span class="badge-num">04</span>
+          <span class="badge-num">05</span>
           <span class="badge-code">MEMORIAL</span>
           <span class="badge-plan badge-plan-free">Free</span>
         </div>
